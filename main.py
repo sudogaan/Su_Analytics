@@ -13,7 +13,15 @@ for x in range(numberofspaces):
 
 endspaces += '|'
 fullmessage = fullmessage  + endspaces
-print(fullmessage)
+#print(fullmessage)
+
+from datetime import datetime
+now = datetime.now()
+current_time = "THE TIME IS", now.strftime("%H:%M")
+
+
+
+
 
 print("""
 -----------------------------------------------------------
@@ -24,18 +32,14 @@ print("""
 |      {}                                                 |
 |                                                         |
 |                                                         |
-|                                                         |
+|      {}                                                 |
 |                                                         |
 |                                                         |
 -----------------------------------------------------------
-""".format(fullmessage))
+""".format(fullmessage, current_time))
 
 
-
-
-
-from datetime import date
-  
+from datetime import date   
 today = date.today()
 print("Date:", today)
 
