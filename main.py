@@ -17,8 +17,17 @@ fullmessage = fullmessage  + endspaces
 
 from datetime import datetime
 now = datetime.now()
-current_time = "THE TIME IS", now.strftime("%H:%M")
+current_time = "THE TIME IS", str(now.strftime("%H:%m"))
+current_time = str(current_time)
+numberofspaces2 = 51-len(current_time)
+print(numberofspaces2)
 
+endspaces2 = ""
+for x in range(numberofspaces2):
+        endspaces2 += " "
+
+endspaces2 += '|'
+current_time = current_time  + endspaces2
 
 
 
@@ -29,10 +38,10 @@ print("""
 |                                                         |
 |                                                         |
 |                                                         |
-|      {}                                                 |
+|      {}                                                
 |                                                         |
 |                                                         |
-|      {}                                                 |
+|      {}                                                 
 |                                                         |
 |                                                         |
 -----------------------------------------------------------
